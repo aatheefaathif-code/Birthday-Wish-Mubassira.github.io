@@ -11,7 +11,7 @@
   // --- DOM Elements ---
   const surpriseTriggerBtn = document.getElementById('surprise-trigger-btn');
   const cakeScene = document.getElementById('cake-scene');
-  const candle = document.getElementById('candle');
+  const candles = document.querySelectorAll('.candle-item');
   const manualBlowBtn = document.getElementById('manual-blow-btn');
   const micButton = document.getElementById('mic-button');
   const micStatus = document.getElementById('mic-status');
@@ -334,10 +334,14 @@
 
     stopMicrophone();
 
-    // Extinguish candle visually
-    candle.classList.add('out');
-    candle.setAttribute('aria-label', 'Candle is blown out');
-    candle.style.pointerEvents = 'none';
+    // Extinguish all 3 candles with a small stagger
+    candles.forEach((c, i) => {
+      setTimeout(() => {
+        c.classList.add('out');
+        c.setAttribute('aria-label', 'Candle is blown out');
+        c.style.pointerEvents = 'none';
+      }, i * 120);
+    });
 
     // Update Mic Status
     micStatus.innerHTML = '✨ <strong>Your wish is on its way, Mubassira! Happy Birthday!</strong> 🥳🎉';
@@ -492,9 +496,11 @@
     isCandleLit = true;
 
     cakeScene.hidden = false;
-    candle.classList.remove('out');
-    candle.setAttribute('aria-label', 'Tap to blow out the candle');
-    candle.style.pointerEvents = 'auto';
+    candles.forEach(c => {
+      c.classList.remove('out');
+      c.setAttribute('aria-label', 'Tap to blow out the candle');
+      c.style.pointerEvents = 'auto';
+    });
 
     micButton.style.display = 'inline-flex';
     manualBlowBtn.style.display = 'inline-flex';
@@ -516,13 +522,15 @@
     resetCandle();
   });
 
-  // Tap-to-blow Candle listeners
-  candle.addEventListener('click', blowOutCandle);
-  candle.addEventListener('keydown', (e) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault();
-      blowOutCandle();
-    }
+  // Tap-to-blow per-candle listeners
+  candles.forEach(c => {
+    c.addEventListener('click', blowOutCandle);
+    c.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        blowOutCandle();
+      }
+    });
   });
 
   manualBlowBtn.addEventListener('click', blowOutCandle);

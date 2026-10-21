@@ -78,84 +78,94 @@
     <section id="cake-scene" class="cake-scene collapsed" aria-label="Make a birthday wish" hidden>
       <div class="scene-header">
         <h2 class="scene-title">Make a wish, Mubassira! ✨</h2>
-        <p class="scene-subtitle">Think of your sweetest wish, and blow out the candle!</p>
+        <p class="scene-subtitle">Think of your sweetest wish, and blow out the candles!</p>
       </div>
 
-      <!-- Realistic Interactive Birthday Cake -->
+      <!-- 3D Cute Clay Birthday Cake (Matching Reference Image) -->
       <div class="cake-stage">
-        <div class="birthday-cake" id="interactive-cake" role="img" aria-label="Birthday cake with glowing candle for Mubassira">
+        <div class="birthday-cake clay-cake" id="interactive-cake" role="img" aria-label="Birthday cake with 3 glowing candles for Mubassira">
           
-          <!-- Candle with Wick, Flame & Smoke -->
-          <div class="candle-wrapper" id="candle" role="button" tabindex="0" aria-label="Tap to blow out the candle">
-            <!-- Halo Glow around flame -->
-            <div class="flame-glow" id="flame-glow" aria-hidden="true"></div>
-            <!-- Animated Flame -->
-            <div class="flame" id="flame" aria-hidden="true">
-              <div class="flame-inner"></div>
+          <!-- 3 Cute Cyan Candles in a Row -->
+          <div class="candles-row" id="candles-group">
+            
+            <!-- Candle 1 (Left) -->
+            <div class="candle-item" id="candle-1" role="button" tabindex="0" aria-label="Candle 1: tap to blow out">
+              <div class="flame-glow" aria-hidden="true"></div>
+              <div class="flame" aria-hidden="true"><div class="flame-inner"></div></div>
+              <div class="smoke-trail" aria-hidden="true">
+                <span class="smoke-particle s1"></span>
+                <span class="smoke-particle s2"></span>
+              </div>
+              <div class="wick" aria-hidden="true"></div>
+              <div class="candle-wax cyan-wax" aria-hidden="true"></div>
             </div>
-            <!-- Smoke wisps (appears when blown out) -->
-            <div class="smoke-trail" id="smoke-trail" aria-hidden="true">
-              <span class="smoke-particle s1"></span>
-              <span class="smoke-particle s2"></span>
-              <span class="smoke-particle s3"></span>
+
+            <!-- Candle 2 (Center) -->
+            <div class="candle-item" id="candle-2" role="button" tabindex="0" aria-label="Candle 2: tap to blow out">
+              <div class="flame-glow" aria-hidden="true"></div>
+              <div class="flame" aria-hidden="true"><div class="flame-inner"></div></div>
+              <div class="smoke-trail" aria-hidden="true">
+                <span class="smoke-particle s1"></span>
+                <span class="smoke-particle s2"></span>
+              </div>
+              <div class="wick" aria-hidden="true"></div>
+              <div class="candle-wax cyan-wax" aria-hidden="true"></div>
             </div>
-            <!-- Wick -->
-            <div class="wick" aria-hidden="true"></div>
-            <!-- Candle Wax with Pastel Spirals -->
-            <div class="candle-body" aria-hidden="true">
-              <span class="wax-stripe"></span>
-              <span class="wax-stripe"></span>
-              <span class="wax-stripe"></span>
+
+            <!-- Candle 3 (Right) -->
+            <div class="candle-item" id="candle-3" role="button" tabindex="0" aria-label="Candle 3: tap to blow out">
+              <div class="flame-glow" aria-hidden="true"></div>
+              <div class="flame" aria-hidden="true"><div class="flame-inner"></div></div>
+              <div class="smoke-trail" aria-hidden="true">
+                <span class="smoke-particle s1"></span>
+                <span class="smoke-particle s2"></span>
+              </div>
+              <div class="wick" aria-hidden="true"></div>
+              <div class="candle-wax cyan-wax" aria-hidden="true"></div>
+            </div>
+
+          </div>
+
+          <!-- Cake Block -->
+          <div class="clay-cake-body">
+            <!-- Fluffy Vanilla Cream Frosting Cap with Pill Sprinkles -->
+            <div class="frosting-cap">
+              <!-- Pill sprinkles scattered on top -->
+              <span class="pill-sprinkle sp-pink sp-1"></span>
+              <span class="pill-sprinkle sp-blue sp-2"></span>
+              <span class="pill-sprinkle sp-orange sp-3"></span>
+              <span class="pill-sprinkle sp-orange sp-4"></span>
+              <span class="pill-sprinkle sp-pink sp-5"></span>
+              
+              <!-- Scalloped dripping bottom edge -->
+              <div class="scallop-edge" aria-hidden="true">
+                <span class="wave-scallop"></span>
+                <span class="wave-scallop"></span>
+                <span class="wave-scallop"></span>
+                <span class="wave-scallop"></span>
+                <span class="wave-scallop"></span>
+                <span class="wave-scallop"></span>
+              </div>
+            </div>
+
+            <!-- Warm Sponge Cake Base -->
+            <div class="sponge-base">
+              <!-- White Cream Middle Stripe with Name -->
+              <div class="middle-cream-stripe">
+                <span class="cake-name-text">Mubassira ✨</span>
+              </div>
             </div>
           </div>
 
-          <!-- Top Tier Frosting & Cherries -->
-          <div class="cake-tier tier-top" aria-hidden="true">
-            <div class="frosting-drips">
-              <span class="drip d1"></span>
-              <span class="drip d2"></span>
-              <span class="drip d3"></span>
-              <span class="drip d4"></span>
-              <span class="drip d5"></span>
-            </div>
-            <div class="cherries-row">
-              <span class="cherry c1">🍓</span>
-              <span class="cherry c2">✨</span>
-              <span class="cherry c3">🍓</span>
-            </div>
-          </div>
-
-          <!-- Bottom Tier Cake Layer -->
-          <div class="cake-tier tier-bottom" aria-hidden="true">
-            <div class="bottom-frosting">
-              <span class="swirl"></span>
-              <span class="swirl"></span>
-              <span class="swirl"></span>
-              <span class="swirl"></span>
-            </div>
-            <!-- Custom Cake Name Plaque -->
-            <div class="cake-name-plaque">
-              <span>Mubassira ✨</span>
-            </div>
-            <div class="sprinkles">
-              <span class="sprinkle sp1"></span>
-              <span class="sprinkle sp2"></span>
-              <span class="sprinkle sp3"></span>
-              <span class="sprinkle sp4"></span>
-              <span class="sprinkle sp5"></span>
-              <span class="sprinkle sp6"></span>
-            </div>
-          </div>
-
-          <!-- Golden Cake Stand / Plate -->
-          <div class="cake-plate" aria-hidden="true"></div>
+          <!-- Cake Soft 3D Ground Shadow -->
+          <div class="cake-ground-shadow" aria-hidden="true"></div>
         </div>
       </div>
 
       <!-- Microphone & Blowing Controls -->
       <div class="mic-control-box">
         <p id="mic-status" class="mic-status" role="status">
-          Blow out your candle! Enable your mic or tap the flame. 🎂
+          Blow out the candles! Enable your mic or tap the flames. 🎂
         </p>
 
         <!-- Live Volume Indicator (visible when mic is active) -->
@@ -173,8 +183,8 @@
             <span class="btn-label">Enable Mic to Blow</span>
           </button>
           
-          <button id="manual-blow-btn" class="ghost-button" type="button" aria-label="Tap to extinguish candle">
-            <span>✨ Tap to Blow Out</span>
+          <button id="manual-blow-btn" class="ghost-button" type="button" aria-label="Tap to extinguish all candles">
+            <span>✨ Tap to Blow Out All</span>
           </button>
         </div>
       </div>

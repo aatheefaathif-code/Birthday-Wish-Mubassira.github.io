@@ -467,288 +467,264 @@ body {
   align-items: center;
 }
 
-.birthday-cake {
-  position: relative;
-  width: 260px;
-  height: 230px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-/* Cake Plate */
-.cake-plate {
-  position: absolute;
-  bottom: 0;
-  width: 290px;
-  height: 18px;
-  background: linear-gradient(180deg, #f8fafc 0%, #cbd5e1 50%, #94a3b8 100%);
-  border-radius: var(--radius-full);
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.4), inset 0 2px 3px rgba(255, 255, 255, 0.8);
-  z-index: 1;
-}
-
-/* Cake Tiers */
-.cake-tier {
-  position: relative;
-  z-index: 2;
-  box-shadow: inset -10px 0 20px rgba(0, 0, 0, 0.15), 0 8px 18px rgba(0, 0, 0, 0.25);
-}
-
-/* Bottom Tier */
-.tier-bottom {
-  width: 250px;
-  height: 95px;
-  background: linear-gradient(180deg, #f472b6 0%, #db2777 40%, #c084fc 75%, #9333ea 100%);
-  border-radius: 18px 18px 8px 8px;
-  position: relative;
-  bottom: 8px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Cake Name Plaque */
-.cake-name-plaque {
-  position: relative;
-  z-index: 3;
-  padding: 5px 22px;
-  background: rgba(255, 255, 255, 0.92);
-  border: 1px solid #ffd1e6;
-  border-radius: var(--radius-full);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-  transform: translateY(6px);
-}
-
-.cake-name-plaque span {
-  font-family: var(--font-script);
-  font-size: 1.45rem;
-  font-weight: 700;
-  color: #db2777;
-  letter-spacing: 0.5px;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.08);
-}
-
-/* Sprinkles on Bottom Tier */
-.sprinkles {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-}
-
-.sprinkle {
-  position: absolute;
-  width: 8px;
-  height: 3px;
-  border-radius: 2px;
-}
-
-.sp1 { top: 20%; left: 15%; background: #fde047; transform: rotate(25deg); }
-.sp2 { top: 65%; left: 22%; background: #ffffff; transform: rotate(-35deg); }
-.sp3 { top: 30%; right: 18%; background: #a5f3fc; transform: rotate(45deg); }
-.sp4 { top: 70%; right: 25%; background: #fde047; transform: rotate(-15deg); }
-.sp5 { top: 45%; left: 8%; background: #c084fc; transform: rotate(70deg); }
-.sp6 { top: 50%; right: 10%; background: #f472b6; transform: rotate(10deg); }
-
-/* Top Tier */
-.tier-top {
-  width: 175px;
-  height: 65px;
-  background: linear-gradient(180deg, #fbcfe8 0%, #f472b6 60%, #e879f9 100%);
-  border-radius: 14px 14px 6px 6px;
-  position: relative;
-  bottom: 8px;
-  z-index: 3;
-}
-
-/* Frosting Drips */
-.frosting-drips {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 22px;
-  background: #ffffff;
-  border-radius: 14px 14px 0 0;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-}
-
-.drip {
-  position: absolute;
-  background: #ffffff;
-  width: 18px;
-  border-radius: 0 0 10px 10px;
-}
-
-.d1 { height: 16px; left: 8px; top: 12px; }
-.d2 { height: 24px; left: 40px; top: 12px; }
-.d3 { height: 14px; left: 78px; top: 12px; }
-.d4 { height: 26px; left: 112px; top: 12px; }
-.d5 { height: 18px; left: 148px; top: 12px; }
-
-/* Cherries / Strawberries row */
-.cherries-row {
-  position: absolute;
-  top: -16px;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  font-size: 18px;
-}
-
 /* ============================================================
-   CANDLE & FLAME
+   CLAY CAKE - 3-CANDLE DESIGN
    ============================================================ */
-.candle-wrapper {
-  position: absolute;
-  top: 5px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 50px;
-  height: 75px;
+
+/* Clay Cake wrapper */
+.clay-cake {
   display: flex;
   flex-direction: column;
   align-items: center;
-  cursor: pointer;
+  gap: 0;
+  position: relative;
+  width: 220px;
+  filter: drop-shadow(0 18px 40px rgba(0,0,0,0.45));
+}
+
+/* --- 3 Candles in a row --- */
+.candles-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 22px;
+  margin-bottom: -2px;
   z-index: 10;
+  position: relative;
+}
+
+.candle-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
   transition: transform 0.2s ease;
 }
 
-.candle-wrapper:hover {
-  transform: translateX(-50%) scale(1.05);
+.candle-item:hover {
+  transform: scale(1.08);
 }
 
-.candle-wrapper:focus-visible {
+.candle-item:focus-visible {
   outline: 2px dashed #fde047;
-  outline-offset: 6px;
+  outline-offset: 4px;
+  border-radius: 4px;
 }
 
-/* Ambient Flame Halo Glow */
-.flame-glow {
+/* Flame Glow Halo */
+.candle-item .flame-glow {
   position: absolute;
-  top: -15px;
-  width: 90px;
-  height: 90px;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(253, 224, 71, 0.45) 0%, rgba(249, 115, 22, 0.2) 40%, transparent 70%);
-  filter: blur(10px);
+  background: radial-gradient(circle, rgba(253,224,71,0.55) 0%, rgba(249,115,22,0.22) 45%, transparent 70%);
+  filter: blur(8px);
   pointer-events: none;
   animation: glowPulse 1.4s ease-in-out infinite alternate;
 }
 
 @keyframes glowPulse {
-  0% { transform: scale(0.9); opacity: 0.7; }
-  100% { transform: scale(1.2); opacity: 1; }
+  0% { transform: translateX(-50%) scale(0.88); opacity: 0.7; }
+  100% { transform: translateX(-50%) scale(1.22); opacity: 1; }
 }
 
 /* Flame */
-.flame {
+.candle-item .flame {
   position: relative;
-  width: 20px;
-  height: 34px;
+  width: 14px;
+  height: 24px;
   border-radius: 50% 50% 35% 35% / 60% 60% 40% 40%;
   background: radial-gradient(ellipse at bottom, #ffffff 0%, #fff7ed 15%, #fef08a 35%, #fb923c 75%, #ef4444 100%);
-  box-shadow: 0 0 20px #fbbf24, 0 0 35px #f97316;
+  box-shadow: 0 0 14px #fbbf24, 0 0 26px #f97316;
   transform-origin: 50% 90%;
   animation: flicker 0.65s ease-in-out infinite alternate;
   z-index: 3;
 }
 
-.flame-inner {
+.candle-item .flame-inner {
   position: absolute;
-  bottom: 3px;
+  bottom: 2px;
   left: 50%;
   transform: translateX(-50%);
-  width: 8px;
-  height: 14px;
+  width: 5px;
+  height: 9px;
   border-radius: 50%;
   background: #ffffff;
   filter: blur(1px);
 }
 
 @keyframes flicker {
-  0% {
-    transform: rotate(-6deg) scale(0.95, 1.05) skewX(2deg);
-  }
-  50% {
-    transform: rotate(4deg) scale(1.04, 0.96) skewX(-2deg);
-  }
-  100% {
-    transform: rotate(-3deg) scale(0.98, 1.02);
-  }
+  0% { transform: rotate(-6deg) scale(0.95, 1.05) skewX(2deg); }
+  50% { transform: rotate(4deg) scale(1.04, 0.96) skewX(-2deg); }
+  100% { transform: rotate(-3deg) scale(0.98, 1.02); }
 }
 
-/* Candle Wick */
-.wick {
-  width: 3px;
-  height: 8px;
+/* Wick */
+.candle-item .wick {
+  width: 2px;
+  height: 6px;
   background: #331d2c;
   border-radius: 2px 2px 0 0;
-  margin-top: -2px;
+  margin-top: -1px;
   z-index: 2;
 }
 
-/* Candle Body */
-.candle-body {
-  width: 16px;
-  height: 36px;
-  border-radius: 4px 4px 0 0;
-  background: repeating-linear-gradient(
-    135deg,
-    #fff5fc 0px,
-    #fff5fc 7px,
-    #c084fc 7px,
-    #c084fc 14px
-  );
-  box-shadow: inset -3px 0 5px rgba(0, 0, 0, 0.25), 0 3px 6px rgba(0, 0, 0, 0.2);
+/* Cyan Wax Candle Body */
+.candle-wax {
+  width: 13px;
+  height: 34px;
+  border-radius: 5px 5px 3px 3px;
   position: relative;
   z-index: 2;
 }
 
-/* Candle Blown Out State */
-.candle-wrapper.out .flame,
-.candle-wrapper.out .flame-glow {
+.cyan-wax {
+  background: linear-gradient(180deg, #a5f3fc 0%, #22d3ee 45%, #0e7490 100%);
+  box-shadow: inset -3px 0 6px rgba(0,0,0,0.2), 0 4px 8px rgba(0,0,0,0.25);
+}
+
+/* Candle blown-out state */
+.candle-item.out .flame,
+.candle-item.out .flame-glow {
   display: none !important;
 }
 
-/* Smoke trail after candle is blown out */
+/* Smoke trail */
 .smoke-trail {
   display: none;
   position: absolute;
-  top: -12px;
+  top: -10px;
   left: 50%;
   transform: translateX(-50%);
+  pointer-events: none;
 }
 
-.candle-wrapper.out .smoke-trail {
+.candle-item.out .smoke-trail {
   display: block;
 }
 
 .smoke-particle {
   position: absolute;
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   background: rgba(230, 220, 240, 0.55);
   border-radius: 50%;
-  filter: blur(4px);
+  filter: blur(3px);
   animation: smokeRise 2.4s ease-out forwards;
 }
 
-.s1 { animation-delay: 0s; left: -4px; }
-.s2 { animation-delay: 0.3s; left: 2px; }
-.s3 { animation-delay: 0.6s; left: -2px; }
+.s1 { animation-delay: 0s; left: -3px; }
+.s2 { animation-delay: 0.3s; left: 1px; }
 
 @keyframes smokeRise {
-  0% {
-    transform: translateY(0) scale(0.6);
-    opacity: 0.8;
-  }
-  100% {
-    transform: translateY(-50px) translateX(15px) scale(2.2);
-    opacity: 0;
-  }
+  0%   { transform: translateY(0) scale(0.6); opacity: 0.8; }
+  100% { transform: translateY(-44px) translateX(12px) scale(2); opacity: 0; }
+}
+
+/* --- Clay Cake Body --- */
+.clay-cake-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Frosting Cap (white vanilla cream top) */
+.frosting-cap {
+  width: 200px;
+  height: 38px;
+  background: linear-gradient(180deg, #fffaf0 0%, #fdf6e3 60%, #f5e6c8 100%);
+  border-radius: 50px 50px 0 0;
+  position: relative;
+  box-shadow: 0 -2px 8px rgba(255,255,255,0.4), inset 0 4px 8px rgba(255,255,255,0.7);
+  overflow: visible;
+}
+
+/* Pill Sprinkles on frosting cap */
+.pill-sprinkle {
+  position: absolute;
+  width: 16px;
+  height: 5px;
+  border-radius: 4px;
+  display: block;
+}
+
+.sp-pink  { background: #f472b6; }
+.sp-blue  { background: #38bdf8; }
+.sp-orange { background: #fb923c; }
+
+.sp-1 { top: 10px; left: 20px;  transform: rotate(-20deg); }
+.sp-2 { top: 6px;  left: 55px;  transform: rotate(10deg);  }
+.sp-3 { top: 12px; left: 90px;  transform: rotate(-8deg);  }
+.sp-4 { top: 6px;  left: 130px; transform: rotate(18deg);  }
+.sp-5 { top: 13px; left: 160px; transform: rotate(-25deg); }
+
+/* Scalloped drip bottom edge */
+.scallop-edge {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.wave-scallop {
+  display: block;
+  width: 28px;
+  height: 14px;
+  background: #fffaf0;
+  border-radius: 0 0 50% 50%;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+}
+
+/* Sponge Cake Base */
+.sponge-base {
+  width: 220px;
+  height: 80px;
+  background: linear-gradient(180deg, #f5c27a 0%, #e8a040 55%, #c97c20 100%);
+  border-radius: 12px 12px 8px 8px;
+  position: relative;
+  box-shadow: inset -6px 0 14px rgba(0,0,0,0.18), 0 8px 18px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* White cream middle stripe with name */
+.middle-cream-stripe {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 22px;
+  background: rgba(255,255,255,0.88);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cake-name-text {
+  font-family: var(--font-script);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #c026d3;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+
+/* Soft ground shadow */
+.cake-ground-shadow {
+  width: 200px;
+  height: 16px;
+  background: radial-gradient(ellipse, rgba(0,0,0,0.35) 0%, transparent 70%);
+  margin-top: 6px;
+  border-radius: 50%;
 }
 
 /* ============================================================
@@ -1178,20 +1154,23 @@ body {
     width: 250px;
   }
   
-  .birthday-cake {
-    width: 220px;
+  .clay-cake {
+    width: 190px;
   }
   
-  .tier-bottom {
-    width: 210px;
-    height: 85px;
+  .sponge-base {
+    width: 190px;
+    height: 68px;
   }
-  
-  .tier-top {
-    width: 150px;
-    height: 55px;
+
+  .frosting-cap {
+    width: 172px;
   }
-  
+
+  .candles-row {
+    gap: 14px;
+  }
+
   .letter-card {
     padding: 24px 18px;
   }
@@ -1204,7 +1183,7 @@ body {
     top: 12px;
     right: 12px;
   }
-  
+
   .music-label {
     display: none;
   }
