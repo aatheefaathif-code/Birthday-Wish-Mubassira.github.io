@@ -30,7 +30,7 @@ Inspired by the concept of digital candle blowing and celebratory surprises, thi
 
 5. **Personalized "Cousin & Friend" Vibe**:
    - Tailored specifically for a cousin who hangs out, chats, and vibes like a close friend:
-     - *"Enakku nee cousin dhaan, aana namma pazhagurathu ennamo oru nalla friend mathiri thaan!"*
+     - *"You might be my cousin, but we hang out and bond just like true friends!"*
      - Genuine, friendly, cheerful appreciation without any awkward or romantic content.
      - Warm wishes for health, happiness, peace of mind, and personal success.
 
