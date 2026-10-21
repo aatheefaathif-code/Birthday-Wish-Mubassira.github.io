@@ -1,7 +1,8 @@
 /**
  * MUBASSIRA BIRTHDAY WEBSITE - JAVASCRIPT
- * Interactive Experience: Cake blowing, Web Audio mic detection,
- * confetti physics, balloon animations & cousin birthday surprise!
+ * Islamic Birthday Dua & Cousin Celebration Experience:
+ * Cake blowing, Web Audio mic detection, geometric star & ribbon confetti,
+ * floating balloons, and warm cousin birthday duas!
  */
 
 (function () {
@@ -164,7 +165,7 @@
     musicLabel.textContent = 'Music: Off';
   }
 
-  // --- Confetti System ---
+  // --- Confetti System (Stars, Sparkles & Ribbons) ---
   const ctx = confettiCanvas.getContext('2d');
   let confettiParticles = [];
   let confettiAnimFrame = null;
@@ -185,7 +186,7 @@
       '#d8b4fe', '#c084fc', '#9333ea',
       '#fef08a', '#fde047', '#a5f3fc', '#ffffff'
     ];
-    const shapes = ['rect', 'circle', 'heart'];
+    const shapes = ['rect', 'circle', 'star'];
 
     confettiParticles = Array.from({ length: count }, () => {
       const angle = Math.random() * Math.PI * 2;
@@ -227,13 +228,27 @@
           ctx.beginPath();
           ctx.arc(0, 0, p.size / 2, 0, Math.PI * 2);
           ctx.fill();
-        } else if (p.shape === 'heart') {
-          // Quick heart shape
+        } else if (p.shape === 'star') {
+          // 5-point Star Shape
           ctx.beginPath();
-          const s = p.size * 0.45;
-          ctx.moveTo(0, s);
-          ctx.bezierCurveTo(-s, -s * 0.6, -s * 1.6, s * 0.4, 0, s * 1.8);
-          ctx.bezierCurveTo(s * 1.6, s * 0.4, s, -s * 0.6, 0, s);
+          const spikes = 5;
+          const outerRadius = p.size * 0.7;
+          const innerRadius = outerRadius * 0.45;
+          let rot = (Math.PI / 2) * 3;
+          let step = Math.PI / spikes;
+          ctx.moveTo(0, -outerRadius);
+          for (let i = 0; i < spikes; i++) {
+            let x = Math.cos(rot) * outerRadius;
+            let y = Math.sin(rot) * outerRadius;
+            ctx.lineTo(x, y);
+            rot += step;
+            x = Math.cos(rot) * innerRadius;
+            y = Math.sin(rot) * innerRadius;
+            ctx.lineTo(x, y);
+            rot += step;
+          }
+          ctx.lineTo(0, -outerRadius);
+          ctx.closePath();
           ctx.fill();
         } else {
           // Ribbon / Rect
@@ -324,8 +339,8 @@
     candle.setAttribute('aria-label', 'Candle is blown out');
     candle.style.pointerEvents = 'none';
 
-    // Update Mic Status and Buttons
-    micStatus.innerHTML = '🎉 <strong>Woohoo! Your wish has been made, Mubassira!</strong> 💖';
+    // Update Mic Status with Islamic Dua
+    micStatus.innerHTML = '🤲 <strong>Masha\'Allah! May Allah accept all your righteous prayers, Mubassira!</strong> 🌙✨';
     micButton.style.display = 'none';
     manualBlowBtn.style.display = 'none';
 
@@ -336,7 +351,7 @@
 
     // Reveal Celebration Section
     celebrationSection.hidden = false;
-    surpriseTriggerBtn.querySelector('.btn-text').textContent = 'Relight & Make Another Wish';
+    surpriseTriggerBtn.querySelector('.btn-text').textContent = 'Relight & Make Another Dua';
     surpriseTriggerBtn.querySelector('.btn-emoji').textContent = '🎂';
 
     // Start celebratory background melody if not already playing
@@ -483,7 +498,7 @@
 
     micButton.style.display = 'inline-flex';
     manualBlowBtn.style.display = 'inline-flex';
-    micStatus.textContent = 'Blow out your candle! Enable your mic or tap the flame. 🎂';
+    micStatus.textContent = 'Make your heartfelt dua, Mubassira! Enable your mic or tap the flame. 🎂';
 
     triggerConfettiBurst(60);
 
@@ -531,7 +546,7 @@
     }
   });
 
-  // Interactive Mini Balloon Pop Game
+  // Interactive Mini Balloon Pop Game with Islamic Duas
   miniBalloons.forEach(balloon => {
     balloon.addEventListener('click', () => {
       if (balloon.classList.contains('popped')) return;
