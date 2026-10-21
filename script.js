@@ -339,8 +339,8 @@
     candle.setAttribute('aria-label', 'Candle is blown out');
     candle.style.pointerEvents = 'none';
 
-    // Update Mic Status with Islamic Dua
-    micStatus.innerHTML = '🤲 <strong>Masha\'Allah! May Allah accept all your righteous prayers, Mubassira!</strong> 🌙✨';
+    // Update Mic Status
+    micStatus.innerHTML = '✨ <strong>Your wish is on its way, Mubassira! Happy Birthday!</strong> 🥳🎉';
     micButton.style.display = 'none';
     manualBlowBtn.style.display = 'none';
 
@@ -351,7 +351,7 @@
 
     // Reveal Celebration Section
     celebrationSection.hidden = false;
-    surpriseTriggerBtn.querySelector('.btn-text').textContent = 'Relight & Make Another Dua';
+    surpriseTriggerBtn.querySelector('.btn-text').textContent = 'Relight & Make Another Wish';
     surpriseTriggerBtn.querySelector('.btn-emoji').textContent = '🎂';
 
     // Start celebratory background melody if not already playing
@@ -498,7 +498,7 @@
 
     micButton.style.display = 'inline-flex';
     manualBlowBtn.style.display = 'inline-flex';
-    micStatus.textContent = 'Make your heartfelt dua, Mubassira! Enable your mic or tap the flame. 🎂';
+    micStatus.textContent = 'Blow out your candle! Enable your mic or tap the flame. 🎂';
 
     triggerConfettiBurst(60);
 

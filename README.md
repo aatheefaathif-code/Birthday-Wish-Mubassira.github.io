@@ -1,16 +1,16 @@
-# 🎂 Happy Birthday, Mubassira! 🌙✨🌸
+# 🎂 Happy Birthday, Mubassira! ✨🌸
 
-A personalized, interactive Islamic birthday celebration & dua web application crafted with heartfelt prayers and warm wishes for **Mubassira** — our wonderful cousin!
+A personalized, interactive birthday celebration web application crafted with warm wishes for **Mubassira** — our wonderful cousin!
 
-Inspired by the concept of digital candle blowing and celebratory surprises, this project elevates the experience with an enchanting pastel pink, purple, and lavender aesthetic, realistic candle physics, real-time microphone breath detection, geometric star & ribbon confetti bursts, floating balloons, celebratory audio, and heartfelt Islamic birthday duas in natural Tamil-English (Tanglish).
+Inspired by the concept of digital candle blowing and celebratory surprises, this project elevates the experience with an enchanting pastel pink, purple, and lavender aesthetic, realistic candle physics, real-time microphone breath detection, glittering star & ribbon confetti bursts, floating balloons, celebratory audio, and heartwarming cousin birthday wishes.
 
 ---
 
 ## 🌟 Key Features
 
-1. **Dreamy Pastel & Islamic Aesthetic**:
+1. **Dreamy Pastel Aesthetic**:
    - Palette tailored with soft pastel pink (`#f472b6`), lavender (`#d8b4fe`), and deep violet glassmorphism.
-   - Ambient floating glow orbs, crescent & star accents, and smooth backdrop blurs.
+   - Ambient floating glow orbs, subtle stars, and smooth backdrop blurs.
    - Elegant typography with Google Fonts (*Dancing Script*, *Playfair Display*, and *Outfit*).
 
 2. **Interactive Gourmet Birthday Cake**:
@@ -28,18 +28,16 @@ Inspired by the concept of digital candle blowing and celebratory surprises, thi
    - Smooth rising pastel balloons with realistic string sway physics.
    - Celebratory synthesized birthday melody using Web Audio API (zero external asset dependencies; works seamlessly anywhere!).
 
-5. **Personalized Islamic Birthday Wishes & Cousin Banter**:
-   - Heartfelt Islamic duas and prayers for Mubassira:
-     - Alhamdulillah for another blessed year of life.
-     - Duas for *Aafiyah* (good health), strong *Imaan*, peace of mind, and *Barakah*.
-     - Duas for success in both *Dunya* and *Akhirah* (Jannatul Firdaus), and protection from *Ayn* (evil eye).
-     - Natural, cheerful cousin banter: Teasing about getting a year older, family function tea, and requesting the mandatory birthday Biryani treat!
-     - 100% halal, family-respectful, non-romantic cousin bond.
+5. **Personalized Birthday Message for Cousin Mubassira**:
+   - Sweet, warm, and polite birthday wishes:
+     - Wishing her a wonderful year ahead full of happiness, peace of mind, and good health.
+     - Appreciation for having such a kind, cheerful, and wonderful cousin in the family.
+     - 100% wholesome, polite, and non-romantic.
 
 6. **Interactive Cousin Perks & Mini Balloon Pop Game**:
-   - "Abundant Duas & Barakah", "The Cousin Biryani Treaty", and "Cousin Bond & Respect" cards.
-   - Pop-able mini balloons with custom audio effects and hidden Islamic birthday duas.
-   - "Make Another Dua & Wish" button to easily relight the cake and repeat the experience.
+   - "Joy & Happiness", "Health & Success", and "Cherished Moments" cards.
+   - Pop-able mini balloons with custom audio effects and hidden birthday wishes.
+   - "Make Another Wish" button to easily relight the cake and repeat the experience.
 
 ---
 
@@ -78,7 +76,7 @@ In your terminal, navigate inside the `Mubassira-Birthday` folder:
 cd "Mubassira-Birthday"
 git init
 git add .
-git commit -m "Update: Islamic birthday wishes and dua for cousin Mubassira"
+git commit -m "Happy Birthday Mubassira website"
 ```
 
 ### Step 2: Create a New GitHub Repository
@@ -115,7 +113,7 @@ git push -u origin main
 
 ```text
 Mubassira-Birthday/
-├── index.html        # Main HTML structure, Islamic dua layout, accessible tags
+├── index.html        # Main HTML structure, semantic layout, accessible tags
 ├── style.css         # Glassmorphism, pastel aesthetics, responsive design system
 ├── script.js         # Web Audio API, candle blowing, star confetti, balloon physics
 └── README.md         # Documentation & deployment guide
@@ -123,5 +121,5 @@ Mubassira-Birthday/
 
 ---
 
-## 🤲 Prayers & Best Wishes
-Crafted with sincere duas & warm wishes for **Mubassira** — Barakallahu Feeki & Happy Birthday! 🌙🌸✨
+## 🌸 Warm Wishes
+Crafted with warm wishes for **Mubassira** — Happy Birthday! ✨🎂🌸
