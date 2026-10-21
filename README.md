@@ -1,8 +1,8 @@
 # 🎂 Happy Birthday, Mubassira! ✨🌸
 
-A personalized, interactive birthday celebration web application crafted with warm wishes for **Mubassira** — our wonderful cousin!
+A personalized, interactive birthday celebration web application crafted with warm wishes for **Mubassira** — cousin by relation, friends by heart!
 
-Inspired by the concept of digital candle blowing and celebratory surprises, this project elevates the experience with an enchanting pastel pink, purple, and lavender aesthetic, realistic candle physics, real-time microphone breath detection, glittering star & ribbon confetti bursts, floating balloons, celebratory audio, and heartwarming cousin birthday wishes.
+Inspired by the concept of digital candle blowing and celebratory surprises, this project elevates the experience with an enchanting pastel pink, purple, and lavender aesthetic, realistic candle physics, real-time microphone breath detection, glittering star & ribbon confetti bursts, floating balloons, celebratory audio, and heartwarming wishes tailored for a cousin who vibes and hangs out like a close friend.
 
 ---
 
@@ -28,14 +28,14 @@ Inspired by the concept of digital candle blowing and celebratory surprises, thi
    - Smooth rising pastel balloons with realistic string sway physics.
    - Celebratory synthesized birthday melody using Web Audio API (zero external asset dependencies; works seamlessly anywhere!).
 
-5. **Personalized Birthday Message for Cousin Mubassira**:
-   - Sweet, warm, and polite birthday wishes:
-     - Wishing her a wonderful year ahead full of happiness, peace of mind, and good health.
-     - Appreciation for having such a kind, cheerful, and wonderful cousin in the family.
-     - 100% wholesome, polite, and non-romantic.
+5. **Personalized "Cousin & Friend" Vibe**:
+   - Tailored specifically for a cousin who hangs out, chats, and vibes like a close friend:
+     - *"Enakku nee cousin dhaan, aana namma pazhagurathu ennamo oru nalla friend mathiri thaan!"*
+     - Genuine, friendly, cheerful appreciation without any awkward or romantic content.
+     - Warm wishes for health, happiness, peace of mind, and personal success.
 
-6. **Interactive Cousin Perks & Mini Balloon Pop Game**:
-   - "Joy & Happiness", "Health & Success", and "Cherished Moments" cards.
+6. **Interactive Cards & Mini Balloon Pop Game**:
+   - "Cousin & Friend Bond", "Smiles & Good Vibes", and "Success & Health" cards.
    - Pop-able mini balloons with custom audio effects and hidden birthday wishes.
    - "Make Another Wish" button to easily relight the cake and repeat the experience.
 
@@ -76,7 +76,7 @@ In your terminal, navigate inside the `Mubassira-Birthday` folder:
 cd "Mubassira-Birthday"
 git init
 git add .
-git commit -m "Happy Birthday Mubassira website"
+git commit -m "Happy Birthday Mubassira website - Cousin & Friend"
 ```
 
 ### Step 2: Create a New GitHub Repository
